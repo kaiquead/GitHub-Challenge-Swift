@@ -26,12 +26,3 @@ struct Github: Codable{
     }
 }
 
-/*
-struct License: Codable{
-    var key: String?
-    var name: String?
-    var spdx_id: String?
-    var url: String?
-    var node_id: String?
-}
-*/
