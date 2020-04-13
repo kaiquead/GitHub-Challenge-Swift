@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ow-46-Lqq">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ow-46-Lqq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,50 +11,57 @@
             <objects>
                 <tableViewController id="7ow-46-Lqq" customClass="MainTableViewController" customModule="GitHubChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J0n-ua-qLD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="xFa-VS-b2m">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHubImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="kU5-y3-jPy">
+                                    <rect key="frame" x="12" y="0.0" width="120.5" height="81"/>
+                                </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MYp-AW-sdc">
-                                    <rect key="frame" x="121.5" y="12" width="132.5" height="57.5"/>
+                                    <rect key="frame" x="141" y="12" width="132.5" height="57.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="GitHub" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-du-lHe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-du-lHe">
                                             <rect key="frame" x="0.0" y="0.0" width="132.5" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" red="0.19364866610000001" green="0.49133324620000002" blue="0.96641188860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-dU-hsb">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-dU-hsb">
                                             <rect key="frame" x="0.0" y="24" width="132.5" height="33.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.91259096746575341" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="MYp-AW-sdc" firstAttribute="centerX" secondItem="xFa-VS-b2m" secondAttribute="centerX" id="1TT-Sz-StQ"/>
+                                <constraint firstItem="kU5-y3-jPy" firstAttribute="leading" secondItem="xFa-VS-b2m" secondAttribute="leading" constant="12" id="7sf-Gs-GAo"/>
+                                <constraint firstAttribute="bottom" secondItem="kU5-y3-jPy" secondAttribute="bottom" id="EVW-qZ-sR1"/>
                                 <constraint firstItem="MYp-AW-sdc" firstAttribute="centerY" secondItem="xFa-VS-b2m" secondAttribute="centerY" id="MhW-UN-MWY"/>
+                                <constraint firstItem="MYp-AW-sdc" firstAttribute="leading" secondItem="kU5-y3-jPy" secondAttribute="trailing" constant="8.5" id="jk9-Va-6DS"/>
+                                <constraint firstItem="kU5-y3-jPy" firstAttribute="top" secondItem="xFa-VS-b2m" secondAttribute="top" id="qKY-Bz-2tQ"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="144" id="Iqn-Wn-yQs" customClass="GitHubTableViewCell" customModule="GitHubChallenge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="109" width="375" height="144"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iqn-Wn-yQs" id="URA-Me-frz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe.png" translatesAutoresizingMaskIntoConstraints="NO" id="HbV-3E-ZPR">
-                                            <rect key="frame" x="7" y="17" width="114" height="110"/>
+                                            <rect key="frame" x="7" y="17" width="153" height="110"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DN9-eM-iuE">
-                                            <rect key="frame" x="139" y="11" width="218" height="122"/>
+                                            <rect key="frame" x="178" y="11" width="218" height="122"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gs2-Ml-pAE">
                                                     <rect key="frame" x="0.0" y="0.0" width="87.5" height="33"/>
@@ -141,6 +148,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GitHubImage.png" width="351.08572387695312" height="351.08572387695312"/>
         <image name="globe.png" width="56" height="56"/>
     </resources>
 </document>
