@@ -11,6 +11,8 @@ import UIKit
 class MainTableViewController: UITableViewController {
     var github: Github!
     var items: [Github.Item] = []
+    var currentPage =  0
+    var loadingCells = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +20,10 @@ class MainTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        loadGitHub()
+    }
+    
+    func loadGitHub(){
         REST.loadAGitHubList(onComplete: { (github) in
             self.github = github
             self.items = self.github.items!
@@ -31,15 +36,18 @@ class MainTableViewController: UITableViewController {
         }) { (error) in
             print("Deu ruim!!!")
         }
-        
-        
     }
-
+    
+    @IBAction func refresh(_ sender: UIRefreshControl) {
+        loadGitHub()
+        sender.endRefreshing()
+        print("pullToRefresh")
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        //print(aux)
         print("The number of repos is:\(items.count)")
         return items.count
     }
@@ -50,14 +58,15 @@ class MainTableViewController: UITableViewController {
         
         let git = items[indexPath.row]
         cell.prepare(with: git)
-        //cell.lbAutorName.text = teste.name
         return cell
     }
     
-   /* override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    /*override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print(indexPath.row)
         
     }*/
 
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
