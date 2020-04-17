@@ -12,7 +12,7 @@ class MainTableViewController: UITableViewController {
     var github: Github!
     var items: [Github.Item] = []
     var currentPage =  0
-    var loadingCells = false
+    var isLoading = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,17 +24,20 @@ class MainTableViewController: UITableViewController {
     }
     
     func loadGitHub(){
-        REST.loadAGitHubList(onComplete: { (github) in
+        self.isLoading = true
+        REST.loadAGitHubList(onComplete: { (github, statusCode) in
             self.github = github
             self.items = self.github.items!
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.isLoading = false
             }
             print ("Deu certo")
             
         }) { (error) in
             print("Deu ruim!!!")
+            self.isLoading = false
         }
     }
     
@@ -60,6 +63,15 @@ class MainTableViewController: UITableViewController {
         cell.prepare(with: git)
         return cell
     }
+    
+    /*override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+
+        if (offsetY > contentHeight - scrollView.frame.height * 4) && !isLoading {
+            loadGitHub()
+        }
+    }*/
     
     /*override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         print(indexPath.row)

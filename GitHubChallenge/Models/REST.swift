@@ -34,7 +34,7 @@ public class REST{
     private static var session = URLSession(configuration: configuration)
     
     
-    class func loadAGitHubList(onComplete: @escaping (Github)->Void, onError: @escaping(GithubError) ->Void){
+    class func loadAGitHubList(onComplete: @escaping (Github, Int)->Void, onError: @escaping(GithubError) ->Void){
         guard let url = URL(string: basePath) else {
             onError(.url)
             return}
@@ -54,7 +54,7 @@ public class REST{
                     //print(String(data: data, encoding: .utf8)!)
                     do{
                         let gits = try JSONDecoder().decode(Github.self, from: data)
-                        onComplete(gits)
+                        onComplete(gits, response.statusCode)
                     } catch{
                         print(error.localizedDescription)
                         print(error)
