@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE61FF002445020E00D58E18 /* GitHubImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EE61FEFF2445020D00D58E18 /* GitHubImage.png */; };
 		EE9D08D7243AB4B900573802 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = EE9D08D6243AB4B800573802 /* globe.png */; };
+		EED3E7612448AF8400E621D8 /* GitHubChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED3E7602448AF8400E621D8 /* GitHubChallengeTests.swift */; };
 		EEF2BEA624258271000EB4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2BEA524258271000EB4CE /* AppDelegate.swift */; };
 		EEF2BEA824258271000EB4CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2BEA724258271000EB4CE /* SceneDelegate.swift */; };
 		EEF2BEAA24258271000EB4CE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2BEA924258271000EB4CE /* MainViewController.swift */; };
@@ -21,9 +22,22 @@
 		EEF2BEC72436B55C000EB4CE /* GitHubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2BEC62436B55C000EB4CE /* GitHubTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EED3E7632448AF8400E621D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEF2BE9A24258271000EB4CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEF2BEA124258271000EB4CE;
+			remoteInfo = GitHubChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		EE61FEFF2445020D00D58E18 /* GitHubImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GitHubImage.png; path = ../../../GitHubImage.png; sourceTree = "<group>"; };
 		EE9D08D6243AB4B800573802 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = globe.png; path = "../../../../Downloads/Arquivos CampeoesDaCopa/globe.png"; sourceTree = "<group>"; };
+		EED3E75E2448AF8400E621D8 /* GitHubChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED3E7602448AF8400E621D8 /* GitHubChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubChallengeTests.swift; sourceTree = "<group>"; };
+		EED3E7622448AF8400E621D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEF2BEA224258271000EB4CE /* GitHubChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF2BEA524258271000EB4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEF2BEA724258271000EB4CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EED3E75B2448AF8400E621D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEF2BE9F24258271000EB4CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +70,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EED3E75F2448AF8400E621D8 /* GitHubChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				EED3E7602448AF8400E621D8 /* GitHubChallengeTests.swift */,
+				EED3E7622448AF8400E621D8 /* Info.plist */,
+			);
+			path = GitHubChallengeTests;
+			sourceTree = "<group>";
+		};
 		EEF2BE9924258271000EB4CE = {
 			isa = PBXGroup;
 			children = (
 				EEF2BEA424258271000EB4CE /* GitHubChallenge */,
+				EED3E75F2448AF8400E621D8 /* GitHubChallengeTests */,
 				EEF2BEA324258271000EB4CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				EEF2BEA224258271000EB4CE /* GitHubChallenge.app */,
+				EED3E75E2448AF8400E621D8 /* GitHubChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +144,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EED3E75D2448AF8400E621D8 /* GitHubChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED3E7672448AF8400E621D8 /* Build configuration list for PBXNativeTarget "GitHubChallengeTests" */;
+			buildPhases = (
+				EED3E75A2448AF8400E621D8 /* Sources */,
+				EED3E75B2448AF8400E621D8 /* Frameworks */,
+				EED3E75C2448AF8400E621D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EED3E7642448AF8400E621D8 /* PBXTargetDependency */,
+			);
+			name = GitHubChallengeTests;
+			productName = GitHubChallengeTests;
+			productReference = EED3E75E2448AF8400E621D8 /* GitHubChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EEF2BEA124258271000EB4CE /* GitHubChallenge */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEF2BEB62425827C000EB4CE /* Build configuration list for PBXNativeTarget "GitHubChallenge" */;
@@ -135,10 +185,14 @@
 		EEF2BE9A24258271000EB4CE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Kaique Alves";
 				TargetAttributes = {
+					EED3E75D2448AF8400E621D8 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = EEF2BEA124258271000EB4CE;
+					};
 					EEF2BEA124258271000EB4CE = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -158,11 +212,19 @@
 			projectRoot = "";
 			targets = (
 				EEF2BEA124258271000EB4CE /* GitHubChallenge */,
+				EED3E75D2448AF8400E621D8 /* GitHubChallengeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EED3E75C2448AF8400E621D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEF2BEA024258271000EB4CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +240,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EED3E75A2448AF8400E621D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED3E7612448AF8400E621D8 /* GitHubChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEF2BE9E24258271000EB4CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +264,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EED3E7642448AF8400E621D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEF2BEA124258271000EB4CE /* GitHubChallenge */;
+			targetProxy = EED3E7632448AF8400E621D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		EEF2BEB02425827C000EB4CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -206,6 +284,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EED3E7652448AF8400E621D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GitHubChallengeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaiquealves.GitHubChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubChallenge.app/GitHubChallenge";
+			};
+			name = Debug;
+		};
+		EED3E7662448AF8400E621D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GitHubChallengeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaiquealves.GitHubChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubChallenge.app/GitHubChallenge";
+			};
+			name = Release;
+		};
 		EEF2BEB42425827C000EB4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -357,6 +475,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EED3E7672448AF8400E621D8 /* Build configuration list for PBXNativeTarget "GitHubChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED3E7652448AF8400E621D8 /* Debug */,
+				EED3E7662448AF8400E621D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EEF2BE9D24258271000EB4CE /* Build configuration list for PBXProject "GitHubChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

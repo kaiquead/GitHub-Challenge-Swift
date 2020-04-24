@@ -11,9 +11,9 @@ import UIKit
 class GitHubTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ivAutor: UIImageView!
-    @IBOutlet weak var lbAutorName: UILabel!
-    @IBOutlet weak var lbRepositoryName: UILabel!
-    @IBOutlet weak var lbStarsQtd: UILabel!
+    @IBOutlet weak var lbAutorName: UILabel?
+    @IBOutlet weak var lbRepositoryName: UILabel?
+    @IBOutlet weak var lbStarsQtd: UILabel?
     //var imagePath: String = ""
     
     override func awakeFromNib() {
@@ -34,13 +34,11 @@ class GitHubTableViewCell: UITableViewCell {
     
     func prepare(with git: Github.Item){
         guard let imagePath = git.owner?.avatar_url else {return}
-        lbAutorName.text = "\(git.name!)"
-        lbRepositoryName.text = "\(git.full_name!)"
-        lbStarsQtd.text = "\(git.stargazers_count!)"
+        lbAutorName?.text = "\(git.name!)"
+        lbRepositoryName?.text = "\(git.full_name!)"
+        lbStarsQtd?.text = "\(git.stargazers_count!)"
         if let imageUrl = URL(string: imagePath){
             ivAutor.loadImge(url: imageUrl)
-        } else {
-            ivAutor.image = UIImage(named: "globe.png")
         }
     }
 }
