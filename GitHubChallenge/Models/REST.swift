@@ -21,7 +21,7 @@ enum GithubError{
 }
 
 public class REST{
-    private static let basePath = "https://api.github.com/search/repositories?q=language:swift&sort=stars"
+    private static var basePath = "https://api.github.com/search/repositories?q=language:swift&sort=stars&per_page=100&page="
     
     private static let configuration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
@@ -34,8 +34,9 @@ public class REST{
     private static var session = URLSession(configuration: configuration)
     
     
-    class func loadAGitHubList(onComplete: @escaping (Github, Int)->Void, onError: @escaping(GithubError) ->Void){
-        guard let url = URL(string: basePath) else {
+    class func loadAGitHubList(page: Int = 1, onComplete: @escaping (Github, Int)->Void, onError: @escaping(GithubError) ->Void){
+        
+        guard let url = URL(string: basePath + String(page)) else {
             onError(.url)
             return}
         
