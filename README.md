@@ -5,7 +5,7 @@ Lista de Repositórios exemplo de chamada:
 https://api.github.com/search/repositories?q=language:swift&sort=stars
 
 * Exibir nome do repo, quantidade de estrelas, foto e nome do autor - :white_check_mark:  
-* Scroll infinito - (*em produção*);  
+* Scroll infinito - :white_check_mark:  
 * Pull to refresh - :white_check_mark:  
 * Testes unitários - (*em produção*);.  
   
