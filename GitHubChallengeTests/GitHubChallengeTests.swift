@@ -11,15 +11,18 @@ import XCTest
 
 
 class GitHubChallengeTests: XCTestCase {
-    var systemUnderTest: GitHubTableViewCell!
+    var sut: GitHubTableViewCell!
+    var tbVC: MainTableViewController!
     
     override func setUp() {
         super.setUp()
-        systemUnderTest = GitHubTableViewCell()
+        sut = GitHubTableViewCell()
+        tbVC = MainTableViewController()
     }
     
     override func tearDown() {
-        systemUnderTest = nil
+        sut = nil
+        tbVC = nil
         super.tearDown()
     }
     
@@ -27,27 +30,20 @@ class GitHubChallengeTests: XCTestCase {
         //the Function is loadGitHubList
         var statusCodeValue = 0
         let statusCodeSucess = 200
-        let expectation = self.expectation(description: "testing")
+        let expectation = self.expectation(description: "Status Code: 200")
         
         REST.loadAGitHubList(onComplete: { (github, statusCode) in
             statusCodeValue = statusCode
             expectation.fulfill()
         }) { (error) in
             statusCodeValue = 404
-            expectation.fulfill()
         }
         waitForExpectations(timeout: 5, handler: nil)
-        XCTAssertEqual(statusCodeSucess, statusCodeValue, "the value must be equals to \(statusCodeSucess)")
+        XCTAssertEqual(statusCodeSucess, statusCodeValue, "the value must be equals to \(statusCodeSucess) and the actual statusCode is \(statusCodeValue)")
     }
     
-    func testPrepareOfTheCells(){
-        XCTAssertTrue(systemUnderTest.lbAutorName?.text != "nome autor", "Autor Name don`t took the name in the REST call")
-        XCTAssertTrue(systemUnderTest.lbRepositoryName?.text != "nome repo", "Repo Name don't took the Repo Name in the REST call")
-        XCTAssertTrue(systemUnderTest.lbStarsQtd?.text != "qtd stars", "Stars qtd don't took the qtd stars in the REST call")
-        XCTAssertTrue(systemUnderTest.ivAutor != nil, "The image can't be nil")
-    }
-    
-    func testloadImageFromURL(){
+    func testPrepareCells (){
         
     }
+    
 }

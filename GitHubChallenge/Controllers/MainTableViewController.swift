@@ -13,7 +13,6 @@ class MainTableViewController: UITableViewController {
     var items: [Github.Item] = []
     var currentPage =  1
     var isLoading = false
-    //var fetchingMore = false
     var carregados = 0
     var total = 0
     

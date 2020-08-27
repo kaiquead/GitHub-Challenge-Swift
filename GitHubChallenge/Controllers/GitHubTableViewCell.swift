@@ -10,7 +10,7 @@ import UIKit
 
 class GitHubTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var ivAutor: UIImageView!
+    @IBOutlet weak var ivAutor: UIImageView?
     @IBOutlet weak var lbAutorName: UILabel?
     @IBOutlet weak var lbRepositoryName: UILabel?
     @IBOutlet weak var lbStarsQtd: UILabel?
@@ -29,7 +29,7 @@ class GitHubTableViewCell: UITableViewCell {
     //I used this method for cell not unset the position's cell
     override func prepareForReuse() {
         super.prepareForReuse()
-        ivAutor.image = nil
+        ivAutor?.image = nil
     }
     
     func prepare(with git: Github.Item){
@@ -38,7 +38,7 @@ class GitHubTableViewCell: UITableViewCell {
         lbRepositoryName?.text = "\(git.full_name!)"
         lbStarsQtd?.text = "\(git.stargazers_count!)"
         if let imageUrl = URL(string: imagePath){
-            ivAutor.loadImge(url: imageUrl)
+            ivAutor?.loadImge(url: imageUrl)
         }
     }
 }
@@ -59,7 +59,7 @@ extension UIImageView {
 
 extension GitHubTableViewCell {
     func styleSetup() {
-        ivAutor.layer.borderWidth = 0.5
-        ivAutor.layer.borderColor = UIColor.lightGray.cgColor
+        ivAutor?.layer.borderWidth = 0.5
+        ivAutor?.layer.borderColor = UIColor.lightGray.cgColor
     }
 }

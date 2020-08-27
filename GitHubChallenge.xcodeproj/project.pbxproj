@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE61FF002445020E00D58E18 /* GitHubImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EE61FEFF2445020D00D58E18 /* GitHubImage.png */; };
-		EE9D08D7243AB4B900573802 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = EE9D08D6243AB4B800573802 /* globe.png */; };
 		EED3E7612448AF8400E621D8 /* GitHubChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED3E7602448AF8400E621D8 /* GitHubChallengeTests.swift */; };
 		EEF2BEA624258271000EB4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2BEA524258271000EB4CE /* AppDelegate.swift */; };
 		EEF2BEA824258271000EB4CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2BEA724258271000EB4CE /* SceneDelegate.swift */; };
@@ -33,8 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EE61FEFF2445020D00D58E18 /* GitHubImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GitHubImage.png; path = ../../../GitHubImage.png; sourceTree = "<group>"; };
-		EE9D08D6243AB4B800573802 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = globe.png; path = "../../../../Downloads/Arquivos CampeoesDaCopa/globe.png"; sourceTree = "<group>"; };
 		EED3E75E2448AF8400E621D8 /* GitHubChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED3E7602448AF8400E621D8 /* GitHubChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubChallengeTests.swift; sourceTree = "<group>"; };
 		EED3E7622448AF8400E621D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,8 +96,6 @@
 		EEF2BEA424258271000EB4CE /* GitHubChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				EE9D08D6243AB4B800573802 /* globe.png */,
-				EE61FEFF2445020D00D58E18 /* GitHubImage.png */,
 				EEF2BEA524258271000EB4CE /* AppDelegate.swift */,
 				EEF2BEA724258271000EB4CE /* SceneDelegate.swift */,
 				EEF2BEAE2425827C000EB4CE /* Assets.xcassets */,
@@ -230,9 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF2BEB22425827C000EB4CE /* LaunchScreen.storyboard in Resources */,
-				EE9D08D7243AB4B900573802 /* globe.png in Resources */,
 				EEF2BEAF2425827C000EB4CE /* Assets.xcassets in Resources */,
-				EE61FF002445020E00D58E18 /* GitHubImage.png in Resources */,
 				EEF2BEC024268F7D000EB4CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
