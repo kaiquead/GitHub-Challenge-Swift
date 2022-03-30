@@ -9,8 +9,8 @@
 import UIKit
 
 class MainTableViewController: UITableViewController {
-    var github: Github!
-    var items: [Github.Item] = []
+    var github: GitHub!
+    var items: [GitHub.Item] = []
     var currentPage =  1
     var isLoading = false
     var carregados = 0
@@ -30,8 +30,8 @@ class MainTableViewController: UITableViewController {
         self.isLoading = true
         REST.loadAGitHubList(page: currentPage, onComplete: { (github, statusCode) in
             self.github = github
-            self.items += self.github.items!
-            self.total = github.total_count!
+            self.items += self.github.items
+            self.total = github.totalCount
             print("Total: \(self.total)  - Já carregados: \(self.items.count)")
             DispatchQueue.main.async {
                 self.isLoading = false

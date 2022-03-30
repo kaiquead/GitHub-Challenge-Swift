@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ow-46-Lqq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ow-46-Lqq">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,24 +15,21 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J0n-ua-qLD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="xFa-VS-b2m">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHubImage" translatesAutoresizingMaskIntoConstraints="NO" id="kU5-y3-jPy">
-                                    <rect key="frame" x="12" y="0.0" width="101" height="81"/>
-                                </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MYp-AW-sdc">
                                     <rect key="frame" x="121.5" y="12" width="132.5" height="57.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="GitHub" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-du-lHe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-du-lHe">
                                             <rect key="frame" x="0.0" y="0.0" width="132.5" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-dU-hsb">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-dU-hsb">
                                             <rect key="frame" x="0.0" y="24" width="132.5" height="33.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,16 +41,12 @@
                             <color key="backgroundColor" white="0.91259096746575341" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="MYp-AW-sdc" firstAttribute="centerX" secondItem="xFa-VS-b2m" secondAttribute="centerX" id="1TT-Sz-StQ"/>
-                                <constraint firstItem="kU5-y3-jPy" firstAttribute="leading" secondItem="xFa-VS-b2m" secondAttribute="leading" constant="12" id="7sf-Gs-GAo"/>
-                                <constraint firstAttribute="bottom" secondItem="kU5-y3-jPy" secondAttribute="bottom" id="EVW-qZ-sR1"/>
                                 <constraint firstItem="MYp-AW-sdc" firstAttribute="centerY" secondItem="xFa-VS-b2m" secondAttribute="centerY" id="MhW-UN-MWY"/>
-                                <constraint firstItem="MYp-AW-sdc" firstAttribute="leading" secondItem="kU5-y3-jPy" secondAttribute="trailing" constant="8.5" id="jk9-Va-6DS"/>
-                                <constraint firstItem="kU5-y3-jPy" firstAttribute="top" secondItem="xFa-VS-b2m" secondAttribute="top" id="qKY-Bz-2tQ"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="144" id="Iqn-Wn-yQs" customClass="GitHubTableViewCell" customModule="GitHubChallenge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="109" width="375" height="144"/>
+                                <rect key="frame" x="0.0" y="125.5" width="375" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iqn-Wn-yQs" id="URA-Me-frz">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
@@ -64,16 +59,16 @@
                                             <rect key="frame" x="139" y="11" width="218" height="122"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gs2-Ml-pAE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="87.5" height="33"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="87" height="33"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kZA-Qa-Rej">
-                                                            <rect key="frame" x="0.0" y="0.0" width="87.5" height="12.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="87" height="12.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="nome autor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xrT-MD-YyF">
-                                                            <rect key="frame" x="0.0" y="12.5" width="87.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="12.5" width="87" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -98,16 +93,16 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bed-UH-XjB">
-                                                    <rect key="frame" x="0.0" y="89.5" width="68" height="32.5"/>
+                                                    <rect key="frame" x="0.0" y="89.5" width="67.5" height="32.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oOj-9w-zTY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="12"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="67.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="qtd stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yrH-f4-tF6">
-                                                            <rect key="frame" x="0.0" y="12" width="68" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="12" width="67.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -129,10 +124,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ivAutor" destination="HbV-3E-ZPR" id="ByK-u1-vSr"/>
-                                    <outlet property="lbAutorName" destination="xrT-MD-YyF" id="7Bp-gS-kWr"/>
-                                    <outlet property="lbRepositoryName" destination="nN5-K7-Hua" id="5g7-Vs-Na2"/>
-                                    <outlet property="lbStarsQtd" destination="yrH-f4-tF6" id="Bwx-hq-RXA"/>
+                                    <outlet property="authorImageView" destination="HbV-3E-ZPR" id="ByK-u1-vSr"/>
+                                    <outlet property="authorNameLabel" destination="xrT-MD-YyF" id="7Bp-gS-kWr"/>
+                                    <outlet property="repositoryNameLabel" destination="nN5-K7-Hua" id="5g7-Vs-Na2"/>
+                                    <outlet property="totalStarsLabel" destination="yrH-f4-tF6" id="Bwx-hq-RXA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -156,7 +151,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GitHubImage" width="512" height="512"/>
         <image name="globe" width="56" height="56"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

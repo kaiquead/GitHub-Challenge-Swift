@@ -10,11 +10,10 @@ import UIKit
 
 class GitHubTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var ivAutor: UIImageView?
-    @IBOutlet weak var lbAutorName: UILabel?
-    @IBOutlet weak var lbRepositoryName: UILabel?
-    @IBOutlet weak var lbStarsQtd: UILabel?
-    //var imagePath: String = ""
+    @IBOutlet weak var authorImageView: UIImageView!
+    @IBOutlet weak var authorNameLabel: UILabel!
+    @IBOutlet weak var repositoryNameLabel: UILabel!
+    @IBOutlet weak var totalStarsLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,22 +28,20 @@ class GitHubTableViewCell: UITableViewCell {
     //I used this method for cell not unset the position's cell
     override func prepareForReuse() {
         super.prepareForReuse()
-        ivAutor?.image = nil
+        authorImageView.image = nil
     }
     
-    func prepare(with git: Github.Item){
-        guard let imagePath = git.owner?.avatar_url else {return}
-        lbAutorName?.text = "\(git.name!)"
-        lbRepositoryName?.text = "\(git.full_name!)"
-        lbStarsQtd?.text = "\(git.stargazers_count!)"
-        if let imageUrl = URL(string: imagePath){
-            ivAutor?.loadImge(url: imageUrl)
-        }
+    func prepare(with item: GitHub.Item){
+        authorNameLabel.text = item.name
+        repositoryNameLabel.text = item.fullName
+        totalStarsLabel.text = String(item.totalStars)
+        authorImageView.loadImage(from: item.owner.avatarURL)
     }
 }
 
 extension UIImageView {
-    func loadImge(url: URL) {
+    
+    func loadImage(from url: URL) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {
@@ -59,7 +56,7 @@ extension UIImageView {
 
 extension GitHubTableViewCell {
     func styleSetup() {
-        ivAutor?.layer.borderWidth = 0.5
-        ivAutor?.layer.borderColor = UIColor.lightGray.cgColor
+        authorImageView?.layer.borderWidth = 0.5
+        authorImageView?.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
